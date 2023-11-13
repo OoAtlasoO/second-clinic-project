@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth import get_user_model
 WEEK_DAYS = (
     ('Monday', 'Monday'),
     ('Tuesday', 'Tuesday'),
@@ -64,4 +64,12 @@ class Services(models.Model):
         return f'{self.speciality} - {self.service} : {self.price}'
 
 
+class Comments(models.Model):
+    text = models.TextField()
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='comments')
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name= 'comments')
+    datetime_created = models.DateTimeField(auto_now_add=True)
+    is_active = models.BooleanField(default=True)
 
+    def __str__(self):
+        return self.text

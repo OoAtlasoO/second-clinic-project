@@ -87,19 +87,24 @@
 
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="department.html" id="dropdown02" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">Department <i class="icofont-thin-down"></i></a>
+							aria-haspopup="true" aria-expanded="false">Accounts <i class="icofont-thin-down"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdown02">
-							<li><a class="dropdown-item" href="department.html">Departments</a></li>
-							<li><a class="dropdown-item" href="department-single.html">Department Single</a></li>
+                            {% if user.is_authenticated %}
+                                <li class="dropdown-item">welcome {{ user.username }}</li>
+                                <li><a class="dropdown-item" href="{% url 'logout' %}">log out</a></li>
+                            {% else %}
+                                <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                                <li><a class="dropdown-item" href="{% url 'account_signup' %}">signup</a></li>
+                            {% endif %}
 
-							<li class="dropdown dropdown-submenu dropright">
-								<a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0301" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
-
-								<ul class="dropdown-menu" aria-labelledby="dropdown0301">
-									<li><a class="dropdown-item" href="index.html">Submenu 01</a></li>
-									<li><a class="dropdown-item" href="index.html">Submenu 02</a></li>
-								</ul>
-							</li>
+{#							<li class="dropdown dropdown-submenu dropright">#}
+{#								<a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0301" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>#}
+{##}
+{#								<ul class="dropdown-menu" aria-labelledby="dropdown0301">#}
+{#									<li><a class="dropdown-item" href="index.html">Submenu 01</a></li>#}
+{#									<li><a class="dropdown-item" href="index.html">Submenu 02</a></li>#}
+{#								</ul>#}
+{#							</li>#}
 						</ul>
 					</li>
 
