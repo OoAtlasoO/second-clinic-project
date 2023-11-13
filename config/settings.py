@@ -159,3 +159,4 @@ LOGOUT_REDIRECT_URL = 'home'
 LOGIN_REDIRECT_URL = 'home'
 
 ACCOUNT_FORMS = {'signup': 'accounts.forms.CustomUserCreationForm'}
+

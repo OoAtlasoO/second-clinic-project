@@ -91,7 +91,7 @@
 						<ul class="dropdown-menu" aria-labelledby="dropdown02">
                             {% if user.is_authenticated %}
                                 <li class="dropdown-item">welcome {{ user.username }}</li>
-                                <li><a class="dropdown-item" href="{% url 'logout' %}">log out</a></li>
+                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">log out</a></li>
                             {% else %}
                                 <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
                                 <li><a class="dropdown-item" href="{% url 'account_signup' %}">signup</a></li>

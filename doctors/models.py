@@ -43,16 +43,10 @@ class Doctor(models.Model):
     image = models.ImageField(upload_to='doctor_images/', blank=True)
     description = models.TextField(blank=True)
 
+
     def __str__(self):
 
         return f'{self.name} {self.last_name} : {self.speciality}'
-
-    def get_working_days(self):
-        days = []
-        days.append(self.working_day)
-        days.append(self.second_working_day)
-        days.append(self.third_working_day)
-        return days
 
 
 class Services(models.Model):

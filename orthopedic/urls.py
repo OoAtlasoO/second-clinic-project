@@ -1,5 +1,5 @@
 from django.urls import path
-from django.views.generic import TemplateView
+from .views import orthopedic_view
 urlpatterns = [
-    path('',TemplateView.as_view(template_name='orthopedic/orthopedic.html'), name='orthopedic')
+    path('', orthopedic_view, name='orthopedic')
     ]
