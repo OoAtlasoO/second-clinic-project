@@ -1,6 +1,6 @@
 from django.urls import path
-from django.views.generic import TemplateView
+from .views import dentistry_view
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='dentistry/dentistry.html'), name='dentistry')
+    path('', dentistry_view, name='dentistry')
 ]

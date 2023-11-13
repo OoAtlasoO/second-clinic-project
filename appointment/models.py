@@ -1,6 +1,9 @@
 from django.db import models
 from datetime import datetime, timedelta
 from django.contrib.auth import get_user_model
+from doctors.models import Services,Doctor
+
+
 
 
 def get_valid_days(days=31):
@@ -34,7 +37,8 @@ TIME_CHOICES = [
 
 
 class Appointment(models.Model):
-    user = models.ForeignKey(get_user_model(),on_delete=models.CASCADE)
+    ordered_service = models.ForeignKey(Services, on_delete=models.CASCADE)
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE , related_name='appointments')
     day = models.CharField(choices=get_valid_days(31))
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)

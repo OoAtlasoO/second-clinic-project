@@ -27,4 +27,5 @@ urlpatterns = [
                   path('dentistry/', include('dentistry.urls')),
                   path('orthopedic/', include('orthopedic.urls')),
                   path(' nursing_care/', include('nursing_care.urls')),
+                  path('doctor/', include('doctors.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

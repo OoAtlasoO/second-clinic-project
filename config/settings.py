@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'dentistry',
     'orthopedic',
     'nursing_care',
+    'doctors',
     # third party
     'crispy_forms',
     "crispy_bootstrap4",
