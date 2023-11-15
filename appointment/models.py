@@ -4,8 +4,6 @@ from django.contrib.auth import get_user_model
 from doctors.models import Services,Doctor
 
 
-
-
 def get_valid_days(days=31):
     now = datetime.now()
     today = now.date()

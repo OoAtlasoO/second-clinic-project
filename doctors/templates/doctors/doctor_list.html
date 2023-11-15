@@ -48,7 +48,9 @@
 	      	<div class="position-relative doctor-inner-box">
 		        <div class="doctor-profile">
 	               <div class="doctor-img">
+                       {% if doctor.image %}
 	               		<img src="{{ doctor.image.url }}" alt="doctor-image" class="img-fluid w-100">
+                       {% endif %}
 	               </div>
 	            </div>
                 <div class="content mt-3">

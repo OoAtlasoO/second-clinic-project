@@ -143,6 +143,7 @@ MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
@@ -158,5 +159,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 LOGOUT_REDIRECT_URL = 'home'
 LOGIN_REDIRECT_URL = 'home'
 
-ACCOUNT_FORMS = {'signup': 'accounts.forms.CustomUserCreationForm'}
+ACCOUNT_FORMS = {'signup': 'accounts.forms.CustomSignupForm'}
 

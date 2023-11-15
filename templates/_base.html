@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load has_group %}
 <!--
  // WEBSITE: https://themefisher.com
  // TWITTER: https://twitter.com/themefisher
@@ -113,6 +114,10 @@
 							aria-haspopup="true" aria-expanded="false">Doctors <i class="icofont-thin-down"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdown03">
 							<li><a class="dropdown-item" href="{% url 'doctor_list' %}">Doctors</a></li>
+                            {% if request.user|has_group:'doctor' %}
+                                <li><a class="dropdown-item" href="#">welcome Doctor {{ user.last_name }}</a></li>
+                                <li><a class="dropdown-item" href="{% url 'doctor_pavilion' user.id %}">Pavilion</a></li>
+                            {% endif %}
 						</ul>
 					</li>
 

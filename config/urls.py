@@ -29,5 +29,4 @@ urlpatterns = [
                   path(' nursing_care/', include('nursing_care.urls')),
                   path('doctor/', include('doctors.urls')),
                   path('accounts/', include('allauth.urls')),
-                  path('accounts/', include('django.contrib.auth.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

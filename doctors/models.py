@@ -33,7 +33,8 @@ class Speciality(models.Model):
 
 
 class Doctor(models.Model):
-    speciality = models.ForeignKey(Speciality, related_name='doctors', on_delete=models.CASCADE,null=True)
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, blank=True, null=True, related_name='doctor')
+    speciality = models.ForeignKey(Speciality, related_name='doctors', on_delete=models.CASCADE, null=True)
     working_day = models.CharField(choices=WEEK_DAYS, blank=True, max_length=50)
     second_working_day = models.CharField(choices=WEEK_DAYS, blank=True, max_length=50)
     third_working_day = models.CharField(choices=WEEK_DAYS, blank=True, max_length=50)

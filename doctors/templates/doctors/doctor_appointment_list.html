@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+{% block content %}
+    <div class="container">
+    <h3>Appointments list</h3>
+    {% for appointment in appointments %}
+        <p>{{ appointment.ordered_service }}</p>
+        <br>
+        <p>{{ appointment.day }} ---- {{ appointment.time }}</p>
+        <br>
+        <p>{{ appointment.first_name }} {{ appointment.last_name }}</p>
+
+    {% endfor %}
+
+
+    </div>
+{% endblock %}
