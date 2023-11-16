@@ -6,10 +6,14 @@
         <form method="post" action="">
             {% csrf_token %}
             <select class="form-select" aria-label="Default select example" name="service">
-              <option selected>Choose a service</option>
-              <option value="dentistry">dentistry</option>
-              <option value="orthopedic">orthopedic</option>
-              <option value="nursing_care">nursing care</option>
+                <option selected>Choose a service</option>
+                <option value="dentistry">dentistry</option>
+                <option value="orthopedic">orthopedic</option>
+                <option value="nursing_care">nursing care</option>
+                <option value="oncology">oncology</option>
+                <option value="pediatrician">pediatrician</option>
+                <option value="psychology">psychology</option>
+
             </select>
             <br>
             <div class="container mt-3 justify-content-center">

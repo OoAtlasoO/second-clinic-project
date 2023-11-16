@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.shortcuts import reverse
 WEEK_DAYS = (
     ('Monday', 'Monday'),
     ('Tuesday', 'Tuesday'),
@@ -44,6 +45,8 @@ class Doctor(models.Model):
     image = models.ImageField(upload_to='doctor_images/', blank=True)
     description = models.TextField(blank=True)
 
+    def get_absolute_url(self):
+        return reverse('doctor_detail', args=[self.id])
 
     def __str__(self):
 

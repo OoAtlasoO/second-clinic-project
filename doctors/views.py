@@ -3,14 +3,17 @@ from django.views import generic
 from .models import Doctor
 from .forms import DoctorCommentForm, CreateDoctorForm
 from appointment.models import Appointment
-from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib.auth.mixins import UserPassesTestMixin
 
 
 class DoctorListView(generic.ListView):
     model = Doctor
     template_name = 'doctors/doctor_list.html'
+    paginate_by = 4
 
 
+@login_required()
 def doctor_detail_view(request, pk):
     doctor = get_object_or_404(Doctor, pk=pk)
     doctor_comments = doctor.comments.all()
@@ -31,8 +34,17 @@ def doctor_detail_view(request, pk):
     })
 
 
+def is_member(user):
+    return user.groups.filter(name='doctor').exists()
+
+
+@login_required()
+@user_passes_test(is_member)
 def doctor_view(request, pk):
-    return render(request, 'doctors/doctor_pavilion.html')
+    if request.user.id == pk:
+        return render(request, 'doctors/doctor_pavilion.html')
+    else:
+        return redirect('home')
 
 
 def doctor_info(request):
@@ -55,3 +67,13 @@ def doctor_appointment(request):
         'doctor': doctor,
         'appointments': appointments,
     })
+
+
+class DoctorUpdateInfo(generic.UpdateView):
+    model = Doctor
+    template_name = 'doctors/doctor_update_info.html'
+    fields = ['name', 'last_name', 'phone_number', 'image', 'description']
+
+    def get_object(self, queryset=None):
+        obj = get_object_or_404(Doctor, user=self.request.user)
+        return obj

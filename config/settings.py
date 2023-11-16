@@ -9,22 +9,24 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
-
+from environs import Env
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+os.path.join(BASE_DIR)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
+env = Env()
+env.read_env()
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@g(lyli&6ves3y9n%rxsenbov*6#b0x76kvcp2)d532ji!nyti'
+SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'herokuapp.com']
 
 # Application definition
 
@@ -44,6 +46,9 @@ INSTALLED_APPS = [
     'orthopedic',
     'nursing_care',
     'doctors',
+    'psychology',
+    'oncology',
+    'pediatrician',
     # third party
     'crispy_forms',
     "crispy_bootstrap4",

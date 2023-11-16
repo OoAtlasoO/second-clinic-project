@@ -1,6 +1,5 @@
-from django.shortcuts import render , get_object_or_404
+from django.shortcuts import render
 from .forms import DentistryAppointmentForm
-from doctors.models import Doctor, Speciality
 
 
 def dentistry_view(request):

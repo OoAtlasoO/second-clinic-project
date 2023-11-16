@@ -1,9 +1,17 @@
 from django.shortcuts import render
-from doctors.models import Doctor
+from .forms import OrthopedicAppointmentForm
 
 
 def orthopedic_view(request):
-    doctors = Doctor.objects.all()
-    return render(request, 'orthopedic/orthopedic.html',{
-        'doctors': doctors,
+    if request.method == 'POST':
+        form = OrthopedicAppointmentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form = OrthopedicAppointmentForm()
+
+    else:
+        form = OrthopedicAppointmentForm()
+
+    return render(request,'orthopedic/orthopedic.html',{
+        'form': form,
     })

@@ -29,4 +29,7 @@ urlpatterns = [
                   path(' nursing_care/', include('nursing_care.urls')),
                   path('doctor/', include('doctors.urls')),
                   path('accounts/', include('allauth.urls')),
+                  path('oncology/', include('oncology.urls')),
+                  path('pediatrician/', include('pediatrician.urls')),
+                  path('psychology/', include('psychology.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
