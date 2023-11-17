@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load i18n %}
 {% load has_group %}
 <!--
  // WEBSITE: https://themefisher.com
@@ -55,14 +56,14 @@
 				<div class="col-lg-6">
 					<ul class="top-bar-info list-inline-item pl-0 mb-0">
 						<li class="list-inline-item"><a href="mailto:support@gmail.com"><i class="icofont-support-faq mr-2"></i>support@novena.com</a></li>
-						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Address Ta-134/A, New York, USA </li>
+						<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>{% trans 'iran-Isfahan' %}</li>
 					</ul>
 				</div>
 				<div class="col-lg-6">
 					<div class="text-lg-right top-right-bar mt-2 mt-lg-0">
 						<a href="tel:+23-345-67890">
-							<span>Call Now : </span>
-							<span class="h4">823-4565-13456</span>
+							<span>{% trans 'Call Now' %} </span>
+							<span class="h4">115</span>
 						</a>
 					</div>
 				</div>
@@ -82,20 +83,20 @@
 
 			<div class="collapse navbar-collapse" id="navbarmain">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="{% url 'about_us' %}">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="{% url 'services_list' %}">Services</a></li>
+					<li class="nav-item active"><a class="nav-link" href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'about_us' %}">{% trans 'About' %}</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'services_list' %}">{% trans 'Services' %}</a></li>
 
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="department.html" id="dropdown02" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">Accounts <i class="icofont-thin-down"></i></a>
+							aria-haspopup="true" aria-expanded="false">{% trans 'Accounts' %} <i class="icofont-thin-down"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdown02">
                             {% if user.is_authenticated %}
-                                <li class="dropdown-item">welcome {{ user.username }}</li>
-                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">log out</a></li>
+                                <li class="dropdown-item">{% trans 'welcome' %} {{ user.username }}</li>
+                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">{% trans 'log out' %}</a></li>
                             {% else %}
-                                <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
-                                <li><a class="dropdown-item" href="{% url 'account_signup' %}">signup</a></li>
+                                <li><a class="dropdown-item" href="{% url 'account_login' %}">{% trans 'Login' %}</a></li>
+                                <li><a class="dropdown-item" href="{% url 'account_signup' %}">{% trans 'signup' %}</a></li>
                             {% endif %}
 
 {#							<li class="dropdown dropdown-submenu dropright">#}
@@ -111,30 +112,37 @@
 
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="{% url 'doctor_list' %}" id="dropdown03" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">Doctors <i class="icofont-thin-down"></i></a>
+							aria-haspopup="true" aria-expanded="false">{% trans 'Doctors' %}<i class="icofont-thin-down"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdown03">
-							<li><a class="dropdown-item" href="{% url 'doctor_list' %}">Doctors</a></li>
+							<li><a class="dropdown-item" href="{% url 'doctor_list' %}">{% trans 'Doctors' %}</a></li>
                             {% if request.user|has_group:'doctor' %}
-                                <li><a class="dropdown-item" href="#">welcome Doctor {{ user.last_name }}</a></li>
-                                <li><a class="dropdown-item" href="{% url 'doctor_pavilion' user.id %}">Pavilion</a></li>
+                                <li><a class="dropdown-item" href="#">{% trans 'welcome Doctor' %} {{ user.last_name }}</a></li>
+                                <li><a class="dropdown-item" href="{% url 'doctor_pavilion' user.id %}">{% trans 'Pavilion' %}</a></li>
                             {% endif %}
 						</ul>
 					</li>
 
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="blog-sidebar.html" id="dropdown05" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">Blog <i class="icofont-thin-down"></i></a>
+							aria-haspopup="true" aria-expanded="false">{% trans 'Blog' %} <i class="icofont-thin-down"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdown05">
 							<li><a class="dropdown-item" href="blog-sidebar.html">Blog with Sidebar</a></li>
 							<li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
 						</ul>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">{% trans 'Contact' %}</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 </header>
+{% if messages %}
+<ul class="message">
+{% for message in messages %}
+    <li class="alert alert-{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
 {% block content %}
 {% endblock %}
 
@@ -165,43 +173,43 @@
 
 			<div class="col-lg-2 col-md-6 col-sm-6">
 				<div class="widget mb-5 mb-lg-0">
-					<h4 class="text-capitalize mb-3">Department</h4>
+					<h4 class="text-capitalize mb-3">{% trans 'Department' %}</h4>
 					<div class="divider mb-4"></div>
 
 					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="#!">Surgery </a></li>
-						<li><a href="#!">Wome's Health</a></li>
-						<li><a href="#!">Radiology</a></li>
-						<li><a href="#!">Cardioc</a></li>
-						<li><a href="#!">Medicine</a></li>
+						<li><a href="#!">{% trans 'Surgery' %} </a></li>
+						<li><a href="#!">{% trans "Women's Health" %}</a></li>
+						<li><a href="#!">{% trans 'Radiology' %}</a></li>
+						<li><a href="#!">{% trans 'Cardiac' %}</a></li>
+						<li><a href="#!">{% trans 'Medicine' %}</a></li>
 					</ul>
 				</div>
 			</div>
 
 			<div class="col-lg-2 col-md-6 col-sm-6">
 				<div class="widget mb-5 mb-lg-0">
-					<h4 class="text-capitalize mb-3">Support</h4>
+					<h4 class="text-capitalize mb-3">{% trans 'Support' %}</h4>
 					<div class="divider mb-4"></div>
 
 					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="#!">Terms & Conditions</a></li>
-						<li><a href="#!">Privacy Policy</a></li>
-						<li><a href="#!">Company Support </a></li>
-						<li><a href="#!">FAQuestions</a></li>
-						<li><a href="#!">Company Licence</a></li>
+						<li><a href="#!">{% trans 'Terms & Conditions' %}</a></li>
+						<li><a href="#!">{% trans 'Privacy Policy' %}</a></li>
+						<li><a href="#!">{% trans 'Company Support ' %}</a></li>
+						<li><a href="#!">{% trans 'FAQuestions' %}</a></li>
+						<li><a href="#!">{% trans 'Company Licence' %}</a></li>
 					</ul>
 				</div>
 			</div>
 
 			<div class="col-lg-3 col-md-6 col-sm-6">
 				<div class="widget widget-contact mb-5 mb-lg-0">
-					<h4 class="text-capitalize mb-3">Get in Touch</h4>
+					<h4 class="text-capitalize mb-3">{% trans 'Get in Touch' %}</h4>
 					<div class="divider mb-4"></div>
 
 					<div class="footer-contact-block mb-4">
 						<div class="icon d-flex align-items-center">
 							<i class="icofont-email mr-3"></i>
-							<span class="h6 mb-0">Support Available for 24/7</span>
+							<span class="h6 mb-0">{% trans 'Support Available for 24/7<' %}</span>
 						</div>
 						<h4 class="mt-2"><a href="mailto:support@email.com">Support@email.com</a></h4>
 					</div>
@@ -209,9 +217,9 @@
 					<div class="footer-contact-block">
 						<div class="icon d-flex align-items-center">
 							<i class="icofont-support mr-3"></i>
-							<span class="h6 mb-0">Mon to Fri : 08:30 - 18:00</span>
+							<span class="h6 mb-0">{% trans 'Mon to Fri : 08:30 - 18:00' %}</span>
 						</div>
-						<h4 class="mt-2"><a href="tel:+23-345-67890">+23-456-6588</a></h4>
+						<h4 class="mt-2"><a href="tel:+23-345-67890">115</a></h4>
 					</div>
 				</div>
 			</div>

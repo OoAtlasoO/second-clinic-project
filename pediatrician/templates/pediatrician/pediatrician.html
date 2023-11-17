@@ -1,13 +1,14 @@
 {% extends '_base.html' %}
+{% load i18n %}
 {% load crispy_forms_filters %}
 {% block content %}
     <div class="container">
-        <h3>pediatrician </h3>
-        <form method="post" action="{% url 'home' %}">
+        <h3>{% trans 'pediatrician' %} </h3>
+        <form method="post" action="">
             {% csrf_token %}
             {{ form|crispy }}
             <br><br>
-            <button type="submit" class="btn btn-success">submit</button>
+            <button type="submit" class="btn btn-success">{% trans 'submit' %}</button>
         </form>
     </div>
 {% endblock %}

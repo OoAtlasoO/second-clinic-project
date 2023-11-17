@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-17 10:34+0330\n"
+"PO-Revision-Date: 2023-11-17 10:48+0330\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: .\templates\services\services_lis.html:3
+msgid "services"
+msgstr "خدمات"
+
+#: .\templates\services\services_lis.html:10
+msgid "Choose a service"
+msgstr "انتخاب خدمت"
+
+#: .\templates\services\services_lis.html:11
+msgid "dentistry"
+msgstr "دندانپزشکی"
+
+#: .\templates\services\services_lis.html:12
+msgid "orthopedic"
+msgstr "ارتوپدی"
+
+#: .\templates\services\services_lis.html:13
+msgid "nursing care"
+msgstr "خدمات پرستاری"
+
+#: .\templates\services\services_lis.html:14
+msgid "oncology"
+msgstr "غدد"
+
+#: .\templates\services\services_lis.html:15
+msgid "pediatrician"
+msgstr "اطفال"
+
+#: .\templates\services\services_lis.html:16
+msgid "psychology"
+msgstr "روانپزشکی"
+
+#: .\templates\services\services_lis.html:21
+msgid "submit"
+msgstr "تایید"

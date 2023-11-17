@@ -1,11 +1,12 @@
 {% extends '_base.html' %}
 {% load crispy_forms_filters %}
+{% load i18n %}
 {% block content %}
     <div class="container">
         <form method="post" action="" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form|crispy }}
-            <button class="btn btn-success">Submit info</button>
+            <button class="btn btn-success">{% trans 'Submit info' %}</button>
         </form>
     </div>
 {% endblock %}

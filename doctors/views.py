@@ -4,7 +4,9 @@ from .models import Doctor
 from .forms import DoctorCommentForm, CreateDoctorForm
 from appointment.models import Appointment
 from django.contrib.auth.decorators import login_required, user_passes_test
-from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 class DoctorListView(generic.ListView):
@@ -24,6 +26,7 @@ def doctor_detail_view(request, pk):
             new_comment_form.user = request.user
             new_comment_form.doctor = doctor
             new_comment_form.save()
+            messages.success(request, _('Your Comment has been sent'))
 
     else:
         comment_form = DoctorCommentForm()
@@ -54,6 +57,7 @@ def doctor_info(request):
             new_form = form.save(commit=False)
             new_form.user = request.user
             new_form.save()
+            messages.success(request, _('Your info saved!'))
             return redirect('doctor_pavilion', pk=request.user.id)
     else:
         form = CreateDoctorForm()
@@ -69,10 +73,11 @@ def doctor_appointment(request):
     })
 
 
-class DoctorUpdateInfo(generic.UpdateView):
+class DoctorUpdateInfo(SuccessMessageMixin,generic.UpdateView):
     model = Doctor
     template_name = 'doctors/doctor_update_info.html'
     fields = ['name', 'last_name', 'phone_number', 'image', 'description']
+    success_message = _('Your info successfully saved!!!!')
 
     def get_object(self, queryset=None):
         obj = get_object_or_404(Doctor, user=self.request.user)

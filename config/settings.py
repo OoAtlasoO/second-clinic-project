@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from environs import Env
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -52,6 +53,8 @@ INSTALLED_APPS = [
     # third party
     'crispy_forms',
     "crispy_bootstrap4",
+    'rosetta',
+    'django_jalali',
     # all auth
     'allauth',
     'allauth.account',
@@ -127,12 +130,18 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa'
+LANGUAGES = (
+    ('en', "English"),
+    ('fa', 'persian')
+)
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
-
+USE_L10N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
@@ -165,4 +174,7 @@ LOGOUT_REDIRECT_URL = 'home'
 LOGIN_REDIRECT_URL = 'home'
 
 ACCOUNT_FORMS = {'signup': 'accounts.forms.CustomSignupForm'}
-
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+    os.path.join(BASE_DIR, '6.appointment', 'locale'),
+)

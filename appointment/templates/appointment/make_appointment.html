@@ -1,7 +1,8 @@
 {% extends '_base.html' %}
+{% load i18n %}
 {% load crispy_forms_filters %}
 {% load crispy_forms_tags %}
-{% block title %}appointment{% endblock %}
+{% block title %}{% trans 'Appointment' %}{% endblock %}
 {% block content %}
 
     <section class="page-title bg-1">
@@ -10,8 +11,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="block text-center">
-                        <span class="text-white">Book your Seat</span>
-                        <h1 class="text-capitalize mb-5 text-lg">Appoinment</h1>
+                        <span class="text-white">{% trans 'Book your Seat' %}</span>
+                        <h1 class="text-capitalize mb-5 text-lg">{% trans 'Appointment' %}</h1>
 
                         <!-- <ul class="list-inline breadcumb-nav">
                           <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
@@ -31,14 +32,14 @@
                         <div class="feature-icon mb-3">
                             <i class="icofont-support text-lg"></i>
                         </div>
-                        <span class="h3">Call for an Emergency Service!</span>
-                        <h2 class="text-color mt-3">+84 789 1256 </h2>
+                        <span class="h3">{% trans 'Call for an Emergency Service!' %}</span>
+                        <h2 class="text-color mt-3">115 </h2>
                     </div>
                 </div>
 
                 <div class="col-lg-8">
                     <div class="appoinment-wrap mt-5 mt-lg-0 pl-lg-5">
-                        <h2 class="mb-2 title-color">Book an appoinment</h2>
+                        <h2 class="mb-2 title-color">{% trans 'Book an appointment' %}</h2>
                         <p class="mb-4">Mollitia dicta commodi est recusandae iste, natus eum asperiores corrupti qui
                             velit . Iste dolorum atque similique praesentium soluta.</p>
                         <form id="#" class="appoinment-form" method="post" action="#">

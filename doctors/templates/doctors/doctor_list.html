@@ -1,6 +1,7 @@
 {% extends '_base.html' %}
 {% load static %}
-{% block title %}doctors{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'doctors' %}{% endblock %}
 {% block content %}
     <!-- portfolio -->
     <section class="section doctors">
@@ -8,7 +9,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
                     <div class="section-title">
-                        <h2>Doctors</h2>
+                        <h2>{% trans 'doctors' %}</h2>
                         <div class="divider mx-auto my-4"></div>
                         <p>We provide a wide range of creative services adipisicing elit. Autem maxime rem modi eaque,
                             voluptate. Beatae officiis neque </p>
@@ -19,25 +20,25 @@
             <div class="col-12 text-center  mb-5">
                 <div class="btn-group btn-group-toggle " data-toggle="buttons">
                     <label class="btn active ">
-                        <input type="radio" name="shuffle-filter" value="all" checked="checked"/>All Department
+                        <input type="radio" name="shuffle-filter" value="all" checked="checked"/>{% trans 'All Department' %}
                     </label>
                     <label class="btn ">
-                        <input type="radio" name="shuffle-filter" value="cat1"/>Cardiology
+                        <input type="radio" name="shuffle-filter" value="cat1"/>{% trans 'Cardiology' %}
                     </label>
                     <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat2"/>Dental
+                        <input type="radio" name="shuffle-filter" value="cat2"/>{% trans 'Dental' %}
                     </label>
                     <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat3"/>Neurology
+                        <input type="radio" name="shuffle-filter" value="cat3"/>{% trans 'Neurology' %}
                     </label>
                     <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat4"/>Medicine
+                        <input type="radio" name="shuffle-filter" value="cat4"/>{% trans 'Medicine' %}
                     </label>
                     <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat5"/>Pediatric
+                        <input type="radio" name="shuffle-filter" value="cat5"/>{% trans 'Pediatric' %}
                     </label>
                     <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat6"/>Traumatology
+                        <input type="radio" name="shuffle-filter" value="cat6"/>{% trans 'Traumatology' %}
                     </label>
                 </div>
             </div>
@@ -73,7 +74,7 @@
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
                     <li class="page-item"><a class="page-link"
-                                             href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+                                             href="?page={{ page_obj.previous_page_number }}">{% trans 'Previous' %}</a></li>
                 {% endif %}
                    {% for page in paginator.page_range %}
                      {% if paginator.num_pages != page %}
@@ -86,7 +87,7 @@
                 </li>
                 {% endif %}
                 {% if page_obj.has_next %}
-                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">{% trans 'Next' %}</a>
                     </li>
                 {% endif %}
 
@@ -100,9 +101,9 @@
                 <div class="col-lg-7">
                     <div class="cta-content">
                         <div class="divider mb-4"></div>
-                        <h2 class="mb-5 text-lg">We are pleased to offer you the <span class="title-color">chance to have the healthy</span>
+                        <h2 class="mb-5 text-lg">{% trans 'We are pleased to offer you the' %} <span class="title-color">{% trans 'chance to have the healthy' %}</span>
                         </h2>
-                        <a href="appoinment.html" class="btn btn-main-2 btn-round-full">Get appoinment<i
+                        <a href="appoinment.html" class="btn btn-main-2 btn-round-full">{% trans 'Get appointment' %}<i
                                 class="icofont-simple-right  ml-2"></i></a>
                     </div>
                 </div>

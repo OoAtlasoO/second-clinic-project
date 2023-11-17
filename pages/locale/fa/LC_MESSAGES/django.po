@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-17 11:48+0330\n"
+"PO-Revision-Date: 2023-11-17 11:21+0330\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: .\templates\footer.html:29
+msgid "Department"
+msgstr "دپارتمان"
+
+#: .\templates\footer.html:33
+msgid "Surgery"
+msgstr "جراحی"
+
+#: .\templates\footer.html:34
+msgid "Women's Health"
+msgstr "سلامت زنان"
+
+#: .\templates\footer.html:35
+msgid "Radiology"
+msgstr "رادیولوژی"
+
+#: .\templates\footer.html:36
+msgid "Cardiac"
+msgstr "قلب و عروق"
+
+#: .\templates\footer.html:37
+msgid "Medicine"
+msgstr "پزشکی"
+
+#: .\templates\footer.html:44
+msgid "Support"
+msgstr "پشتیبانی"
+
+#: .\templates\footer.html:48
+msgid "Terms & Conditions"
+msgstr "شرایط و ضوابط"
+
+#: .\templates\footer.html:49
+msgid "Privacy Policy"
+msgstr "حریم خصوصی"
+
+#: .\templates\footer.html:50
+msgid "Company Support "
+msgstr "پشتیبانی شرکت"
+
+#: .\templates\footer.html:51
+msgid "FAQuestions"
+msgstr "سوالات متداول"
+
+#: .\templates\footer.html:52
+msgid "Company Licence"
+msgstr ""
+
+#: .\templates\footer.html:59
+msgid "Get in Touch"
+msgstr "در تماس باشید"
+
+#: .\templates\footer.html:65
+msgid "Support Available for 24/7<"
+msgstr "پشتیبانی 24 ساعته"
+
+#: .\templates\footer.html:73
+msgid "Mon to Fri : 08:30 - 18:00"
+msgstr "شنبه تا جمعه. 8صبح الی 6 بعد از ظهر"
+
+#: .\templates\header.html:10
+msgid "iran-Isfahan"
+msgstr "ایران-اصفهان"
+
+#: .\templates\header.html:16
+msgid "Call Now"
+msgstr "اکنون تماس بگیرید"
+
+#: .\templates\header.html:37
+#, fuzzy
+#| msgid "Home page"
+msgid "Home"
+msgstr "صفحه اصلی"
+
+#: .\templates\header.html:38
+msgid "About"
+msgstr "درباره ما"
+
+#: .\templates\header.html:39
+msgid "Services"
+msgstr "خدمات"
+
+#: .\templates\header.html:43
+msgid "Accounts"
+msgstr "حساب ها"
+
+#: .\templates\header.html:46
+msgid "welcome"
+msgstr "خوش آمدی"
+
+#: .\templates\header.html:47
+msgid "log out"
+msgstr "خروج"
+
+#: .\templates\header.html:49
+msgid "Login"
+msgstr "ورود"
+
+#: .\templates\header.html:50
+msgid "signup"
+msgstr "ثبت نام"
+
+#: .\templates\header.html:66 .\templates\header.html:68
+msgid "Doctors"
+msgstr "پزشکان"
+
+#: .\templates\header.html:70
+msgid "welcome Doctor"
+msgstr "خوش آمدی دکتر"
+
+#: .\templates\header.html:71
+msgid "Pavilion"
+msgstr "پاویون"
+
+#: .\templates\header.html:78
+msgid "Blog"
+msgstr "بلاگ"
+
+#: .\templates\header.html:84
+msgid "Contact"
+msgstr "ارتباط با ما"
+
+#~ msgid "Home page"
+#~ msgstr "صفحه اصلی"
+
+#~ msgid "Total Health care solution"
+#~ msgstr "راه حلی برای سلامت"
+
+#~ msgid "Your most trusted health partner"
+#~ msgstr "به مراقبان سلامت خود اطمینان کنید"

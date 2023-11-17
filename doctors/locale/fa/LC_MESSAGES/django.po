@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-17 13:04+0330\n"
+"PO-Revision-Date: 2023-11-17 12:24+0330\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: .\models.py:41
+msgid "speciality"
+msgstr "تخصص"
+
+#: .\models.py:42
+msgid "working day"
+msgstr "روز کاری"
+
+#: .\models.py:45
+msgid "name"
+msgstr "نام"
+
+#: .\models.py:46
+msgid "last name"
+msgstr "نام خوانوادگی"
+
+#: .\models.py:47
+msgid "phone number"
+msgstr "شماره تماس"
+
+#: .\models.py:48
+msgid "image"
+msgstr "تصویر"
+
+#: .\models.py:49
+msgid "description"
+msgstr "درباره ی شما"
+
+#: .\models.py:68
+#, fuzzy
+#| msgid "Next"
+msgid "text"
+msgstr "بعدی"
+
+#: .\templates\doctors\doctor_appointment_list.html:5
+msgid "Appointments list"
+msgstr "لیست ملاقات ها"
+
+#: .\templates\doctors\doctor_detail.html:4
+msgid "doctor details"
+msgstr "مشخصات ‍پزشک"
+
+#: .\templates\doctors\doctor_detail.html:37
+msgid "Introducing myself"
+msgstr "معرفی خودم"
+
+#: .\templates\doctors\doctor_detail.html:42
+msgid "Make an Appointment"
+msgstr "تنظیم ملاقات"
+
+#: .\templates\doctors\doctor_detail.html:54
+msgid "submit"
+msgstr "تایید"
+
+#: .\templates\doctors\doctor_info.html:9
+msgid "Submit info"
+msgstr "ارسال اطلاعات"
+
+#: .\templates\doctors\doctor_list.html:4
+#: .\templates\doctors\doctor_list.html:12
+msgid "doctors"
+msgstr "پزشکان"
+
+#: .\templates\doctors\doctor_list.html:23
+msgid "All Department"
+msgstr "دپارتمان ها"
+
+#: .\templates\doctors\doctor_list.html:26
+msgid "Cardiology"
+msgstr "قلب و عروق"
+
+#: .\templates\doctors\doctor_list.html:29
+msgid "Dental"
+msgstr "دندانپزشکی"
+
+#: .\templates\doctors\doctor_list.html:32
+msgid "Neurology"
+msgstr "مغز و اعصاب"
+
+#: .\templates\doctors\doctor_list.html:35
+msgid "Medicine"
+msgstr "پزشک عمومی"
+
+#: .\templates\doctors\doctor_list.html:38
+msgid "Pediatric"
+msgstr "اطفال"
+
+#: .\templates\doctors\doctor_list.html:41
+msgid "Traumatology"
+msgstr "تروماتولوژی"
+
+#: .\templates\doctors\doctor_list.html:77
+msgid "Previous"
+msgstr "قبلی"
+
+#: .\templates\doctors\doctor_list.html:90
+msgid "Next"
+msgstr "بعدی"
+
+#: .\templates\doctors\doctor_list.html:104
+msgid "We are pleased to offer you the"
+msgstr "ما خوشحالیم که به شما "
+
+#: .\templates\doctors\doctor_list.html:104
+msgid "chance to have the healthy"
+msgstr "شانس داشتن سلامتی را پیشنهاد می کنیم"
+
+#: .\templates\doctors\doctor_list.html:106
+msgid "Get appointment"
+msgstr "درخواست ملاقات"
+
+#: .\templates\doctors\doctor_pavilion.html:5
+msgid "Doctor's Pavilion"
+msgstr "پاویون پزشکان"
+
+#: .\templates\doctors\doctor_update_info.html:6
+msgid "Update personal information"
+msgstr "بروزرسانی اطلاعات شخصی"
+
+#: .\templates\doctors\doctor_update_info.html:10
+msgid "Update"
+msgstr "بروزرسانی"
+
+#: .\views.py:29
+msgid "Your Comment has been sent"
+msgstr ""
+
+#: .\views.py:60
+msgid "Your info saved!"
+msgstr "اطلاعات شما ثبت شد"
+
+#: .\views.py:80
+msgid "Your info successfully saved!!!!"
+msgstr "اطلاعات شما با موفقیت ثبت شد"

@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-17 11:09+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: .\_base.html:59
+msgid "iran-Isfahan"
+msgstr "ایران-اصفهان"
+
+#: .\_base.html:65
+msgid "Call Now"
+msgstr "همین حالا تماس بگیرید"
+
+#: .\_base.html:86
+msgid "Home"
+msgstr "خانه"
+
+#: .\_base.html:87
+msgid "About"
+msgstr "درباره ما"
+
+#: .\_base.html:88
+msgid "Services"
+msgstr "خدمات"
+
+#: .\_base.html:92
+msgid "Accounts"
+msgstr "حساب کاربری"
+
+#: .\_base.html:95
+msgid "welcome"
+msgstr "خوش آمدید"
+
+#: .\_base.html:96
+msgid "log out"
+msgstr "خروج"
+
+#: .\_base.html:98
+msgid "Login"
+msgstr "وارد شدن"
+
+#: .\_base.html:99
+msgid "signup"
+msgstr "ثبت نام"
+
+#: .\_base.html:115 .\_base.html:117
+msgid "Doctors"
+msgstr "پزشکان"
+
+#: .\_base.html:119
+msgid "welcome Doctor"
+msgstr "خوش آمدید دکتر"
+
+#: .\_base.html:120
+msgid "Pavilion"
+msgstr "پاویون"
+
+#: .\_base.html:127
+msgid "Blog"
+msgstr "بلاگ"
+
+#: .\_base.html:133
+msgid "Contact"
+msgstr "تماس با ما"
+
+#: .\_base.html:169
+msgid "Department"
+msgstr "دپارتمان"
+
+#: .\_base.html:173
+msgid "Surgery"
+msgstr "جراحی"
+
+#: .\_base.html:174
+msgid "Women's Health"
+msgstr "سلامت زنان"
+
+#: .\_base.html:175
+msgid "Radiology"
+msgstr "رادیولوژی"
+
+#: .\_base.html:176
+msgid "Cardiac"
+msgstr "قلب و عروق"
+
+#: .\_base.html:177
+msgid "Medicine"
+msgstr "پزشکی"
+
+#: .\_base.html:184
+msgid "Support"
+msgstr "پشتیبانی"
+
+#: .\_base.html:188
+msgid "Terms & Conditions"
+msgstr "شرایط و ضوابط"
+
+#: .\_base.html:189
+msgid "Privacy Policy"
+msgstr "حریم خصوصی"
+
+#: .\_base.html:190
+msgid "Company Support "
+msgstr "پشتیبانی شرکت"
+
+#: .\_base.html:191
+msgid "FAQuestions"
+msgstr "سوالات متداول"
+
+#: .\_base.html:192
+msgid "Company Licence"
+msgstr ""
+
+#: .\_base.html:199
+msgid "Get in Touch"
+msgstr "در تماس باشید"
+
+#: .\_base.html:205
+msgid "Support Available for 24/7<"
+msgstr "پشتیبانی 24 ساعته"
+
+#: .\_base.html:213
+msgid "Mon to Fri : 08:30 - 18:00"
+msgstr "شنبه تا جمعه. 8صبح الی 6 بعد از ظهر"

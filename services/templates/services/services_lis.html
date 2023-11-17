@@ -1,23 +1,24 @@
 {% extends '_base.html' %}
-{% block titel %}services list{% endblock %}
+{% load i18n %}
+{% block titel %}{% trans 'services' %} list{% endblock %}
 {% block content %}
     <div class="container">
 
         <form method="post" action="">
             {% csrf_token %}
             <select class="form-select" aria-label="Default select example" name="service">
-                <option selected>Choose a service</option>
-                <option value="dentistry">dentistry</option>
-                <option value="orthopedic">orthopedic</option>
-                <option value="nursing_care">nursing care</option>
-                <option value="oncology">oncology</option>
-                <option value="pediatrician">pediatrician</option>
-                <option value="psychology">psychology</option>
+                <option selected>{% trans 'Choose a service' %}</option>
+                <option value="dentistry">{% trans 'dentistry' %}</option>
+                <option value="orthopedic">{% trans 'orthopedic' %}</option>
+                <option value="nursing_care">{% trans 'nursing care' %}</option>
+                <option value="oncology">{% trans 'oncology' %}</option>
+                <option value="pediatrician">{% trans 'pediatrician' %}</option>
+                <option value="psychology">{% trans 'psychology' %}</option>
 
             </select>
             <br>
             <div class="container mt-3 justify-content-center">
-                <button type="submit" class="btn btn-success">submit</button>
+                <button type="submit" class="btn btn-success">{% trans 'submit' %}</button>
             </div>
         </form>
     </div>

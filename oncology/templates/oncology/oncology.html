@@ -3,7 +3,7 @@
 {% block content %}
     <div class="container">
         <h3>Oncology </h3>
-        <form method="post" action="{% url 'home' %}">
+        <form method="post" action="">
             {% csrf_token %}
             {{ form|crispy }}
             <br><br>

@@ -1,7 +1,7 @@
 from django.db import models
 from datetime import datetime, timedelta
-from django.contrib.auth import get_user_model
-from doctors.models import Services,Doctor
+from doctors.models import Services, Doctor
+from django.utils.translation import gettext_lazy as _
 
 
 def get_valid_days(days=31):
@@ -35,12 +35,15 @@ TIME_CHOICES = [
 
 
 class Appointment(models.Model):
-    ordered_service = models.ForeignKey(Services, on_delete=models.CASCADE)
-    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE , related_name='appointments')
-    day = models.CharField(choices=get_valid_days(31))
-    first_name = models.CharField(max_length=150)
-    last_name = models.CharField(max_length=150)
-    time = models.CharField(choices=TIME_CHOICES)
+    ordered_service = models.ForeignKey(Services, on_delete=models.CASCADE, verbose_name=_('ordered service'))
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='appointments', verbose_name=_('doctor'))
+    day = models.CharField(choices=get_valid_days(31), verbose_name=_('day'))
+    first_name = models.CharField(max_length=150, verbose_name=_('first name'))
+    last_name = models.CharField(max_length=150, verbose_name=_('last name'))
+    time = models.CharField(choices=TIME_CHOICES, verbose_name=_('time'))
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.doctor}: {self.day}--{self.time}'
 
